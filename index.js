@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://fullstackUser:lyngbymongo@fullstack-cluster-ikeoi.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "ADD_YOUR_CONNECTION_STRING";
+
 const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: true });
 
 async function mongoTest() {
@@ -17,7 +18,7 @@ async function mongoTest() {
     }
     finally {
         client.close()
-        console.log("Closes")
+        console.log("Closes connection")
     }
 }
 mongoTest();
